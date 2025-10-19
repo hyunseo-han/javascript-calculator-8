@@ -10,6 +10,9 @@ class App {
   }
 
   calculate(input) {
+    if (input || input.trim() === "") {
+      return 0;
+    }
     return 0;
   }
 }
