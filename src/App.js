@@ -41,7 +41,17 @@ class App {
 
     let sum = 0;
     for (const numStr of numbers) {
-      sum += Number(numStr);
+      const num = Number(numStr);
+
+      if (Number.isNaN(num)) {
+        throw new Error("[ERROR] 숫자가 아닌 값이 포함되어 있습니다.");
+      }
+
+      if (num < 0) {
+        throw new Error("[ERROR] 음수는 입력할 수 없습니다.");
+      }
+
+      sum += num;
     }
 
     return sum;
