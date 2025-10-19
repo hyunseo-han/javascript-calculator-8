@@ -15,9 +15,17 @@ class App {
     }
     const delimiter = /[,:]/;
     const numberString = input;
-    const numbers = numberString.split(delimiter);
+    const numbers = numberString
+      .split(delimiter)
+      .map((str) => str.trim())
+      .filter((str) => str !== "");
 
-    return 0;
+    let sum = 0;
+    for (const numStr of numbers) {
+      sum += Number(numStr);
+    }
+
+    return sum;
   }
 }
 
