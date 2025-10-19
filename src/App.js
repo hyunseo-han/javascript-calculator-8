@@ -13,6 +13,10 @@ class App {
     if (input || input.trim() === "") {
       return 0;
     }
+    const delimiter = /[,:]/;
+    const numberString = input;
+    const numbers = numberString.split(delimiter);
+
     return 0;
   }
 }
